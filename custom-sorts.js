@@ -72,12 +72,23 @@ const users = [
     friends: [2, 3, 4]
   },
 ]
-console.log(ageSort(users));
+//console.log(ageSort(users));
 //----------------------------------------
 function oddEvenSort(arr) {
   // Your code here
+  return arr.sort(oddEvenCompareson);
 }
-
+function oddEvenCompareson(a, b) {
+  if (a % 2 === 1 && b % 2 === 0) return -1;
+  if (a % 2 === 0 && b % 2 === 1) return 1;
+  return a - b;
+}
+//-----Local test area-----------------
+const arr1 = [5, 4, 7, 2, 9, 8, 1, 6, 3];
+const arr2 = [5, 8, 13, 6, 22, 14, 9];
+console.log(oddEvenSort(arr1));
+console.log(oddEvenSort(arr2));
+//--------------------------------------
 function validAnagrams(s, t) {
   // Your code here
 }
